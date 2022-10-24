@@ -22,36 +22,43 @@ class HomeScreen extends StatelessWidget {
                     backgroundColor: Colors.black,
                     stretch: true,
                     floating: true,
-            leading: Image.network("https://cdn-icons-png.flaticon.com/512/1384/1384060.png",
-         
-            ),
+                    leading: Image.network(
+                      "https://cdn-icons-png.flaticon.com/512/1384/1384060.png",
+                    ),
                     title: Text(
                       "Youtube",
-                      style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
                     ),
                     actions: [
                       Icon(
                         Icons.cast,
                         color: Colors.white,
                       ),
-                      SizedBox(width: 5,),
+                      SizedBox(
+                        width: 5,
+                      ),
                       Icon(
                         Icons.notifications,
                         color: Colors.white,
                       ),
-                        SizedBox(width: 5,),
+                      SizedBox(
+                        width: 5,
+                      ),
                       Icon(
                         Icons.search,
                         color: Colors.white,
                       ),
-                        SizedBox(width: 5,),
+                      SizedBox(
+                        width: 5,
+                      ),
                       Container(
                         height: 35,
                         width: 35,
                         decoration: BoxDecoration(
-                          color: Colors.red,
-                        shape: BoxShape.circle
-                        ),
+                            color: Colors.red, shape: BoxShape.circle),
                         child: Center(child: Text("S")),
                       )
                     ],
@@ -66,21 +73,34 @@ class HomeScreen extends StatelessWidget {
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5),
-                                 color: Colors.grey[850],
+                                color: Colors.grey[850],
                               ),
-                             
                               height: 20,
                               width: 90,
                               child: Row(
                                 children: [
-                                  SizedBox(width: 5,),
-                                  Icon(Icons.explore,color: Colors.white,),
-                                    SizedBox(width: 5,),
-                                  Text("Explore",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Icon(
+                                    Icons.explore,
+                                    color: Colors.white,
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    "Explore",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
                                 ],
                               ),
                             ),
-                            SizedBox(width: 15,),
+                            SizedBox(
+                              width: 15,
+                            ),
                             Container(
                               height: 10,
                               width: 2,
@@ -89,7 +109,9 @@ class HomeScreen extends StatelessWidget {
                                 color: Colors.grey[850],
                               ),
                             ),
-                            SizedBox(width: 15,),
+                            SizedBox(
+                              width: 15,
+                            ),
                             TabBar(
                               indicatorWeight: 0.5,
                               isScrollable: true,
@@ -129,7 +151,9 @@ class HomeScreen extends StatelessWidget {
                 LiveScreen(),
                 MixesScreen(),
                 MusicScreen(),
-              ]))),
+              ]),
+              ),
+              ),
     );
   }
 }

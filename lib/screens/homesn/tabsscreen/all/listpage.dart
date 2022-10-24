@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:youtubeclone/screens/homesn/tabsscreen/all/playscreen.dart';
 
-class AlltabScreen extends StatelessWidget {
+class AlllistScreen extends StatelessWidget {
   final Image1;
   final Image2;
   final text1;
   final text2;
   final text3;
   final IconData icon1;
-  const AlltabScreen(
+  const AlllistScreen(
       {super.key,
       required this.Image1,
       required this.Image2,
@@ -22,13 +23,18 @@ class AlltabScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          width: double.infinity,
-          height: 240,
-          decoration: BoxDecoration(
-              color: Colors.grey,
-              image: DecorationImage(
-                  image: NetworkImage(Image1), fit: BoxFit.cover)),
+        GestureDetector(
+          onTap: () {
+           Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const PlayScreen()));
+          },
+          child: Container(
+            width: double.infinity,
+            height: 240,
+            decoration: BoxDecoration(
+                color: Colors.grey,
+                image: DecorationImage(
+                    image: NetworkImage(Image1), fit: BoxFit.cover)),
+          ),
         ),
         Container(
           width: double.infinity,
@@ -79,7 +85,7 @@ class AlltabScreen extends StatelessWidget {
               ],
             ),
           ),
-        )
+        ),
       ],
     );
   }
